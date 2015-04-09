@@ -141,6 +141,10 @@ commands:
     description: "Forces synchronisation from database"
     usage: "/bmsync <local || external>"
     permission: bm.command.sync
+  baniprange:
+    description: "Ban an entire ip range"
+    usage: "/baniprange <cidr || wildcard> <reason>"
+    permission: bm.command.baniprange
 permissions:
   bm.*:
     description: Gives access to all BanManager commands
@@ -158,6 +162,7 @@ permissions:
       bm.command.bminfo.alts: true
       bm.command.bminfo.website: true
       bm.command.banip: true
+      bm.command.baniprange: true
       bm.command.tempbanip: true
       bm.command.unbanip: true
       bm.command.import: true
@@ -238,6 +243,9 @@ permissions:
   bm.command.banip:
     description: Allows you to ban an ip
     default: op
+  bm.command.baniprange:
+      description: Allows you to ban an ip range
+      default: op
   bm.command.tempbanip:
     description: Allows you to temban an ip
     default: op

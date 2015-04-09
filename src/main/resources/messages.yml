@@ -143,6 +143,15 @@ messages:
     error:
       exists: '&c[ip] is already banned'
 
+  baniprange:
+    error:
+      invalid: '&cInvalid range, please use cidr notation 192.168.0.1/16 or wildcard 192.168.*.*'
+      minMax: '&cRange must be lowest to higest'
+      exists: '&cA ban containing those ranges already exists'
+    ip:
+      disallowed: 'You have been banned from this server for [reason]'
+      kick: 'You have been banned permanently for [reason]'
+
   banipall:
     notify: '[ip] will be permanently banned by [actor] for [reason]'
 
